@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678819359961" clover="3.2.0">
-  <project timestamp="1678819359961" name="All files">
+<coverage generated="1678892955245" clover="3.2.0">
+  <project timestamp="1678892955245" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3" elements="34" coveredelements="34" complexity="0" loc="25" ncloc="25" packages="1" files="2" classes="2"/>
     <file name="genDiff.js" path="/home/elena/frontend-project-46/src/genDiff.js">
       <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>

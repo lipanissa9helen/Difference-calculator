@@ -5,4 +5,6 @@
 
 ![Actions Status](https://github.com/lipanissa9helen/frontend-project-46/actions/workflows/main.yml/badge.svg)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a9f1ce439ecf499b6c84/test_coverage)](https://codeclimate.com/github/lipanissa9helen/frontend-project-46/test_coverage)
+
 [![asciicast](https://asciinema.org/a/YIEujoA7TkysepnN85Uw8IaQm.svg)](https://asciinema.org/a/YIEujoA7TkysepnN85Uw8IaQm)
