@@ -1,9 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/lipanissa9helen/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/lipanissa9helen/frontend-project-46/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a9f1ce439ecf499b6c84/maintainability)](https://codeclimate.com/github/lipanissa9helen/frontend-project-46/maintainability)
+[![Node CI](https://github.com/lipanissa9helen/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/lipanissa9helen/frontend-project-46/actions)
 
-![Actions Status](https://github.com/lipanissa9helen/frontend-project-46/actions/workflows/main.yml/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a9f1ce439ecf499b6c84/maintainability)](https://codeclimate.com/github/lipanissa9helen/frontend-project-46/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a9f1ce439ecf499b6c84/test_coverage)](https://codeclimate.com/github/lipanissa9helen/frontend-project-46/test_coverage)
 
