@@ -14,7 +14,5 @@ test('file json', () => {
   const filename2 = getFixturePath('file2.json');
   const resultFile = readFile('result_json.txt');
   const result = genDiff(filename1, filename2);
-  //console.log(typeof resultFile);
-  //log(typeof result);
   expect(result).toEqual(resultFile);
 });
