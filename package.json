@@ -5,7 +5,7 @@
   "description": "Education project - Differene",
   "main": "bin/gendiff.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
