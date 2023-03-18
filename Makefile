@@ -20,7 +20,4 @@ test-coverage:
 	npm test -- --coverage
 	
 test-watch:
-	npm run test -- --watch	
-	
-lint:
-	npx eslint .
+	npm run test -- --watch
