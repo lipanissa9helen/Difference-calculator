@@ -32,10 +32,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/preset-env": "^7.20.2",
     "@jest/globals": "^29.5.0",
-    "babel-jest": "^29.5.0",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
