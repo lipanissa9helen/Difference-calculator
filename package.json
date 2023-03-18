@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/lipanissa9helen/frontend-project-46#readme",
   "dependencies": {
-    "@jest/globals": "^29.5.0",
     "commander": "^10.0.0",
     "coverage": "^0.4.1",
     "fs": "^0.0.1-security",
