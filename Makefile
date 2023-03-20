@@ -9,9 +9,6 @@ lint:
 
 gendiff: 
 	node bin/gendiff.js -h
-	
-run:
-	node bin/gendiff file1.json file2.json
 
 test:
 	npm test
