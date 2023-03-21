@@ -13,11 +13,11 @@ const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 test('file json', () => {
   const expected = readFile('result_json.txt');
   const actual = genDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'));
-  expect(actual).toBe(expected);
+  expect(toString(actual)).toBe(toString(expected));
 });
 
 test('file yml', () => {
   const expected = readFile('result_json.txt');
   const actual = genDiff(getFixturePath('filepath1.yml'), getFixturePath('filepath2.yml'));
-  expect(actual).toBe(expected);
+  expect(toString(actual)).toBe(toString(expected));
 });
