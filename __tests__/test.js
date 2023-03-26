@@ -1,7 +1,6 @@
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import { expect, test } from '@jest/globals';
 import genDiff from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,14 +9,15 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
-test('file json', () => {
-  const expected = readFile('result_json.txt');
-  const actual = genDiff(getFixturePath('filepath1.json'), getFixturePath('filepath2.json'));
-  expect(actual).toBe(expected);
-});
+const fileJSON1 = getFixturePath('file1.json');
+const fileJSON2 = getFixturePath('file2.json');
+const resultStylish = readFile('result_stylish.txt');
 
-test('file yml', () => {
-  const expected = readFile('result_json.txt');
-  const actual = genDiff(getFixturePath('filepath1.yml'), getFixturePath('filepath2.yml'));
-  expect(actual).toBe(expected);
+test.each([{
+  file1: fileJSON1, file2: fileJSON2, format: 'stylish', expected: resultStylish,
+},
+])('tests', ({
+  a, b, format, expected,
+}) => {
+  expect(genDiff(a, b, format)).toBe(expected);
 });
