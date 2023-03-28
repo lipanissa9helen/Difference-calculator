@@ -43,5 +43,4 @@ const iter = (tree, depth = 1) => {
     });
   return result;
 };
-
 export default (diff) => `{\n${iter(diff).join('\n')}\n}`;

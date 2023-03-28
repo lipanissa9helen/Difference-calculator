@@ -10,26 +10,32 @@ const stringify = (value) => {
   return String(value);
 };
 
-const plain = (diff) => {
-  const iter = (innerData, oldKey = '') => {
-    const result = innerData.map((data) => {
-      switch (data.type) {
-        case 'nested':
-          return iter(data.children, `${oldKey}${data.key}.`);
-        case 'added':
-          return `Property ${oldKey}${data.key} was added with value: ${stringify(data.value)}`;
-        case 'delited':
-          return `Property ${oldKey}${data.key} was removed`;
-        case 'changed':
-          return `Property ${oldKey}${data.key} was updated. From ${stringify(data.oldValue)} to ${stringify(data.value)}`;
-        case 'unchanged':
-          return [];
+const iter = (tree, previousKey = '') => {
+  const result = tree
+    .filter(({ type }) => type !== 'unchanged')
+    .flatMap(({
+      type, key, value, value1, value2,
+    }) => {
+      const keys = [...previousKey, key];
+      const path = keys.join('.');
+      switch (type) {
+        case 'nested': {
+          return iter(value, keys);
+        }
+        case 'deleted': {
+          return `Property '${path}' was removed`;
+        }
+        case 'added': {
+          return `Property '${path}' was added with value: ${stringify(value)}`;
+        }
+        case 'changed': {
+          return `Property '${path}' was updated. From ${stringify(value1)} to ${stringify(value2)}`;
+        }
         default:
-          throw new Error(`Unknown type ${data.key}`);
+          throw new Error(`Error: ${key} - unknown node type`);
       }
     });
-    return result.join('\n');
-  };
-  return iter(diff);
+  return result;
 };
-export default plain;
+
+export default (diff) => iter(diff).join('\n');
