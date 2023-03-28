@@ -38,7 +38,7 @@ const iter = (tree, depth = 1) => {
           return `${getIndent(depth)}  ${key}: ${stringify(value, depth)}`;
         }
         default:
-          throw new Error(`Error: ${type} - this type doesn't exist in this file`);
+          throw new Error(`Error: ${type} this type doesn't exist in this file`);
       }
     });
   return result;

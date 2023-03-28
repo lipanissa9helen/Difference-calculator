@@ -32,7 +32,7 @@ const iter = (tree, previousKey = '') => {
           return `Property '${path}' was updated. From ${stringify(value1)} to ${stringify(value2)}`;
         }
         default:
-          throw new Error(`Error: ${key} - unknown node type`);
+          throw new Error(`Error: ${key} unknown node type`);
       }
     });
   return result;
