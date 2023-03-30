@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const stringify = (value) => {
   if (!_.isObject(value)) {
-    const formattedValue = _.isString(value) ? `${value}` : `${value}`;
+    const formattedValue = _.isString(value) ? `'${value}'` : `${value}`;
     return formattedValue;
   }
   return '[complex value]';
