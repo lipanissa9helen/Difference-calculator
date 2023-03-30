@@ -23,6 +23,10 @@ make install
 npm link
 ```
 
+### How to use:
+
+This program calculates the difference between two json or yaml(yml) structures and outputs the report to the console. Write in your console gendiff + 2 paths to files you want to compare. You can optionally choose one of three formatters: stylish(used by default), plain or json.
+
 For use this programm install Node.js of the latest version on the system globally. Upgrade Node.js to the latest version.
 
 ### • Help information
