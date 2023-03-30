@@ -16,5 +16,4 @@ export default (filepath1, filepath2, formatName = 'stylish') => {
   const parseData1 = parse(data1, getFormat(path1));
   const parseData2 = parse(data2, getFormat(path2));
   return formatTree(buildTree(parseData1, parseData2), formatName);
-  // формируем дерево различий, достаем формат и формируем исходя из формата
 };

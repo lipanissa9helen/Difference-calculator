@@ -37,5 +37,4 @@ const iter = (tree, previousKey = '') => {
     });
   return result;
 };
-
 export default (diff) => iter(diff).join('\n');

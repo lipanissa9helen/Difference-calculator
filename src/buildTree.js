@@ -1,9 +1,7 @@
 import _ from 'lodash';
 
 const buildTree = (obj1, obj2) => {
-  const keys1 = _.keys(obj1);
-  const keys2 = _.keys(obj2);
-  const keys = _.sortBy(_.union(keys1, keys2));
+  const keys = _.sortBy(_.union(_.keys(obj1), _.keys(obj2)));
 
   const tree = keys.map((key) => {
     if (_.isPlainObject(obj1[key]) && _.isPlainObject(obj2[key])) {
