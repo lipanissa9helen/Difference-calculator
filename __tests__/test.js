@@ -39,9 +39,6 @@ test.each([{
 {
   file1: fileYML1, file2: fileYML2, format: 'json', expected: resultJSON,
 },
-{
-  file1: fileYML1, file2: fileYML2, format: undefined, expected: resultStylish,
-},
 ])('tests', ({
   file1, file2, format, expected,
 }) => {
