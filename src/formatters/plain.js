@@ -1,22 +1,20 @@
 import _ from 'lodash';
 
 const stringify = (value) => {
-  if (_.isObject(value)) {
-    return '[complex value]';
+  if (!_.isObject(value)) {
+    const formattedValue = _.isString(value) ? `'${value}'` : `${value}`;
+    return formattedValue;
   }
-  if (typeof value === 'string') {
-    return `'${value}'`;
-  }
-  return String(value);
+  return '[complex value]';
 };
 
-const iter = (tree, previousKey = '') => {
+const iter = (tree, pathKey = '') => {
   const result = tree
     .filter(({ type }) => type !== 'unchanged')
     .flatMap(({
       type, key, value, value1, value2,
     }) => {
-      const keys = [...previousKey, key];
+      const keys = [...pathKey, key];
       const path = keys.join('.');
       switch (type) {
         case 'nested': {
@@ -37,4 +35,4 @@ const iter = (tree, previousKey = '') => {
     });
   return result;
 };
-export default (diff) => iter(diff).join('\n');
+export default (tree) => iter(tree).join('\n');
