@@ -22,9 +22,10 @@ make install
 ```
 npm link
 ```
+
 For use this programm install Node.js of the latest version on the system globally. Upgrade Node.js to the latest version.
 
-### Help information
+### • Help information
 [![asciicast](https://asciinema.org/a/NaekjbOKRa2pwkROSK2V8WewU.svg)](https://asciinema.org/a/NaekjbOKRa2pwkROSK2V8WewU)
 
 ### • Comparing json and yml files and making output in stylish format
