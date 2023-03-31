@@ -32,11 +32,11 @@ For use this programm install Node.js of the latest version on the system global
 ### • Help information
 [![asciicast](https://asciinema.org/a/NaekjbOKRa2pwkROSK2V8WewU.svg)](https://asciinema.org/a/NaekjbOKRa2pwkROSK2V8WewU)
 
-### • Comparing json and yml files and making output in stylish format
+### • Comparing JSON and YML files and making output in stylish format
 [![asciicast](https://asciinema.org/a/ulIDf2OiYhHK4p3qUEesZR6XF.svg)](https://asciinema.org/a/ulIDf2OiYhHK4p3qUEesZR6XF)
 
-### • Comparing json and yml files and making output in plain format
+### • Comparing JSON and YML files and making output in plain format
 [![asciicast](https://asciinema.org/a/wuLOgTpJmxJirOuQs72AHx9od.svg)](https://asciinema.org/a/wuLOgTpJmxJirOuQs72AHx9od)
 
-### • Comparing json and yml files and making output in json format
-[![asciicast](https://asciinema.org/a/XzDlKkUnAYvIvWU0KPCG7STTO.svg)](https://asciinema.org/a/XzDlKkUnAYvIvWU0KPCG7STTO)
+### • Comparing JSON and YML files and making output in json format
+[![asciicast](https://asciinema.org/a/U0gUWbYwJV5GUPpLQgbgocWZz.svg)](https://asciinema.org/a/U0gUWbYwJV5GUPpLQgbgocWZz)

@@ -1,36 +1,34 @@
-import _ from 'lodash';
-
 const stringify = (value) => {
-  if (!_.isObject(value)) {
-    const formattedValue = _.isString(value) ? `'${value}'` : `${value}`;
-    return formattedValue;
+  if (typeof value === 'string') {
+    return `'${value}'`;
   }
-  return '[complex value]';
+  if (typeof value === 'object' && value !== null) {
+    return '[complex value]';
+  }
+  return value;
 };
 
 const iter = (tree, pathKey = '') => {
   const result = tree
     .filter(({ type }) => type !== 'unchanged')
-    .flatMap(({
-      type, key, value, value1, value2,
-    }) => {
-      const keys = [...pathKey, key];
+    .flatMap((node) => {
+      const keys = [...pathKey, node.key];
       const path = keys.join('.');
-      switch (type) {
+      switch (node.type) {
         case 'nested': {
-          return iter(value, keys);
+          return iter(node.value, keys);
         }
         case 'deleted': {
           return `Property '${path}' was removed`;
         }
         case 'added': {
-          return `Property '${path}' was added with value: ${stringify(value)}`;
+          return `Property '${path}' was added with value: ${stringify(node.value)}`;
         }
         case 'changed': {
-          return `Property '${path}' was updated. From ${stringify(value1)} to ${stringify(value2)}`;
+          return `Property '${path}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
         }
         default:
-          throw new Error(`Error: ${key} unknown node type`);
+          throw new Error(`Error: ${node.key} unknown node type`);
       }
     });
   return result;
