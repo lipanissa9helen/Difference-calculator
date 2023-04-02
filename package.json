@@ -23,13 +23,9 @@
   "dependencies": {
     "commander": "^10.0.0",
     "coverage": "^0.4.1",
-    "fs": "^0.0.1-security",
     "jest-globals": "^0.1.7",
     "js-yaml": "^4.1.0",
-    "lodash": "^4.17.21",
-    "path": "^0.12.7",
-    "process": "^0.11.10",
-    "url": "^0.11.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
