@@ -5,7 +5,7 @@ const stringify = (value) => {
   if (typeof value === 'object' && value !== null) {
     return '[complex value]';
   }
-  return value;
+  return String(value);
 };
 
 const iter = (tree, pathKey = '') => {
